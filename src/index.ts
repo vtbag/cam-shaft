@@ -19,12 +19,11 @@ addEventListener('pageswap', () => localStorage.setItem('vtbag-camshaft', '' + s
 addEventListener('pagereveal', async (e) => {
 	if (!e.viewTransition) return;
 	let newOffset = 0;
-	// @ts-expect-error
-	if (navigation.activation.navigationType === 'traverse') {
+
+	if (window.navigation && window.navigation?.activation.navigationType === 'traverse' || performance.navigation.type === 2) {
 		newOffset = scrollY;
 	} else {
-		// @ts-expect-error
-		const hash = new URL(navigation.activation.entry.url).hash ?? '#top';
+		const hash = location.hash ?? '#top';
 		if (hash) {
 			document.documentElement.querySelector(hash)?.scrollIntoView({
 				behavior: 'instant',
