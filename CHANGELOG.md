@@ -1,5 +1,11 @@
 # @vtbag/cam-shaft
 
+## 1.0.2
+
+### Patch Changes
+
+- 46a8732: improving robustness
+
 ## 1.0.1 - 2024-10-17
 
 ### Patch Changes
