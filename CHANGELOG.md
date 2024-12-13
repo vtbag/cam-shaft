@@ -1,5 +1,11 @@
 # @vtbag/cam-shaft
 
+## 1.0.3 - 2024-12-13
+
+### Patch Changes
+
+- d1a91e2: Removes dependency on Navigation API
+
 ## 1.0.2 - 2024-12-12
 
 ### Patch Changes
