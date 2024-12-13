@@ -1,6 +1,6 @@
 # @vtbag/cam-shaft
 
-## 1.0.3
+## 1.0.3 - 2024-12-13
 
 ### Patch Changes
 
