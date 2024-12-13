@@ -15,12 +15,15 @@ for (const c of config) {
 		newDuration.push(0);
 	}
 }
-addEventListener('pageswap', () => localStorage.setItem('vtbag-camshaft', '' + scrollY));
+addEventListener('pageswap', (e) => {
+	localStorage.setItem('vtbagCamshaftScrollY', '' + scrollY);
+	localStorage.setItem('vtbagCamshaftNavigationType', e.activation?.navigationType);
+});
 addEventListener('pagereveal', async (e) => {
 	if (!e.viewTransition) return;
 	let newOffset = 0;
 
-	if (window.navigation && window.navigation?.activation.navigationType === 'traverse' || performance.navigation.type === 2) {
+	if (sessionStorage.getItem('vtbagCamshaftNavigationType') === 'traverse') {
 		newOffset = scrollY;
 	} else {
 		const hash = location.hash ?? '#top';
