@@ -13,7 +13,7 @@ The @vtbag website can be found at https://vtbag.dev/
 
 ## !!! News !!!
 
-Dependency updates
+The Cam-Shaft should now also work for browsers that support cross-document view transitions but have no support for the Navigation API (looking at you, Safari).
 
 For details see the [CHANGELOG](https://github.com/vtbag/cam-shaft/blob/main/CHANGELOG.md)
 
