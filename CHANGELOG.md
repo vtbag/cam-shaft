@@ -1,5 +1,11 @@
 # @vtbag/cam-shaft
 
+## 1.0.4
+
+### Patch Changes
+
+- 3e99b12: Fixes buggy session persistence
+
 ## 1.0.3 - 2024-12-13
 
 ### Patch Changes
