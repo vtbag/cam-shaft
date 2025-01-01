@@ -16,8 +16,8 @@ for (const c of config) {
 	}
 }
 addEventListener('pageswap', (e) => {
-	localStorage.setItem('vtbagCamshaftScrollY', '' + scrollY);
-	localStorage.setItem('vtbagCamshaftNavigationType', e.activation?.navigationType);
+	sessionStorage.setItem('vtbagCamshaftScrollY', '' + scrollY);
+	sessionStorage.setItem('vtbagCamshaftNavigationType', e.activation?.navigationType);
 });
 addEventListener('pagereveal', async (e) => {
 	if (!e.viewTransition) return;
@@ -35,7 +35,7 @@ addEventListener('pagereveal', async (e) => {
 			newOffset = scrollY;
 		}
 	}
-	const oldOffset = parseFloat(localStorage.getItem('vtbag-camshaft') ?? '0');
+	const oldOffset = parseFloat(sessionStorage.getItem('vtbagCamshaftScrollY') ?? '0');
 
 	await e.viewTransition?.ready;
 
