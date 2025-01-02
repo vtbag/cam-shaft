@@ -1,5 +1,11 @@
 # @vtbag/cam-shaft
 
+## 1.0.5 - 2025-01-02
+
+### Patch Changes
+
+- 6fb7e14: Implements a workaround for a bug in Webkit where user agent animation have wrong names
+
 ## 1.0.4 - 2025-01-01
 
 ### Patch Changes
