@@ -44,7 +44,10 @@ addEventListener('pagereveal', async (e) => {
 			document.documentElement,
 			`::view-transition-group(${vtn})`
 		);
-		const groupAnimationName = groupStyle.animationName;
+		let groupAnimationName = groupStyle.animationName;
+		if (groupAnimationName.startsWith('"')) {
+			groupAnimationName = groupAnimationName.slice(1, -1);
+		}
 		if (groupAnimationName === `-ua-view-transition-group-anim-${vtn}`) {
 			const ms = (s: string) => {
 				const res = parseFloat(s);
