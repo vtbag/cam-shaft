@@ -17,7 +17,7 @@ for (const c of config) {
 }
 addEventListener('pageswap', (e) => {
 	sessionStorage.setItem('vtbagCamshaftScrollY', '' + scrollY);
-	sessionStorage.setItem('vtbagCamshaftNavigationType', e.activation?.navigationType);
+	sessionStorage.setItem('vtbagCamshaftNavigationType', e.activation?.navigationType ?? 'unknown');
 });
 addEventListener('pagereveal', async (e) => {
 	if (!e.viewTransition) return;
