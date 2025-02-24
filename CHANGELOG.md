@@ -1,5 +1,11 @@
 # @vtbag/cam-shaft
 
+## 1.0.6 - 2025-02-24
+
+### Patch Changes
+
+- 2c75692: Makes code more robust facing optional values.
+
 ## 1.0.5 - 2025-01-02
 
 ### Patch Changes
